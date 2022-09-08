@@ -11,7 +11,6 @@ import {
   useNavigate,
   Link,
   useLocation,
-  NavigationType,
 } from 'react-router-dom'
 
 import { useSendLogoutMutation } from '../features/auth/authApiSlice'

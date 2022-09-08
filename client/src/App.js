@@ -1,21 +1,27 @@
 import { Routes, Route } from 'react-router-dom'
+//  components
 import Layout from './components/Layout'
 import Public from './components/Public'
-import Login from './features/auth/Login'
 import DashLayout from './components/DashLayout'
+//  features
+import Login from './features/auth/Login'
 import Welcome from './features/auth/Welcome'
-import NotesList from './features/notes/NotesList'
-import UsersList from './features/users/UsersList'
-import EditUser from './features/users/EditUser'
-import NewUserForm from './features/users/NewUserForm'
-import EditNote from './features/notes/EditNote'
-import NewNote from './features/notes/NewNote'
 import Prefetch from './features/auth/Prefetch'
 import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuth'
+import UsersList from './features/users/UsersList'
+import EditUser from './features/users/EditUser'
+import NewUserForm from './features/users/NewUserForm'
+import NotesList from './features/notes/NotesList'
+import EditNote from './features/notes/EditNote'
+import NewNote from './features/notes/NewNote'
+//  config
 import { ROLES } from './config/roles'
+//  hooks
+import useTitle from './hooks/useTitle'
 
 function App() {
+  useTitle('Tuner Tire Shop')
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
